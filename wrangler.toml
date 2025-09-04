@@ -1,0 +1,9 @@
+name = "promptfolio"
+main = "./.open-next/worker.js"
+assets = { directory = "./.open-next/assets" }
+compatibility_date = "2025-09-04"
+
+[vars]
+NEXT_PUBLIC_SUPABASE_URL = "https://<project-ref>.supabase.co"
+NEXT_PUBLIC_SUPABASE_ANON_KEY = "<anon>"
+NEXT_PUBLIC_APP_URL = "https://promptfolio.workers.dev"

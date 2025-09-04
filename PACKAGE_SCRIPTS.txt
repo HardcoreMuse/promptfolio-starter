@@ -1,0 +1,5 @@
+Add these to your package.json "scripts":
+
+  "build": "next build",
+  "cf:workers:build": "opennext build --adapter=@opennextjs/cloudflare",
+  "cf:workers:deploy": "wrangler deploy"
