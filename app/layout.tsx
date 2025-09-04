@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { initAnalytics } from '@/lib/analytics'
 import ConsentBanner from '@/components/ConsentBanner'
+import AuthStatus from '@/components/AuthStatus';
 
 export const metadata: Metadata = {
   title: 'Promptfolio (Starter)',
@@ -18,9 +19,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   }
   return (
     <html lang="en">
-      <body>
+      <body suppressHydrationWarning>
         <ConsentBanner />
         <main className="container py-10">{children}</main>
+        <AuthStatus />
       </body>
     </html>
   )
