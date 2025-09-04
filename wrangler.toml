@@ -6,4 +6,4 @@ compatibility_date = "2025-09-04"
 [vars]
 NEXT_PUBLIC_SUPABASE_URL = "https://agmcmcbwpoedhrqomcgc.supabase.co"
 NEXT_PUBLIC_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFnbWNtY2J3cG9lZGhycW9tY2djIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcwMDAwMzYsImV4cCI6MjA3MjU3NjAzNn0.pC9etCz1BlFWLXk15KRk9oyqoxBT-7H0bKIMIR9aiH0"
-NEXT_PUBLIC_APP_URL = "http://localhost:3000"
+NEXT_PUBLIC_APP_URL = "https://promptfolio.workers.dev"
