@@ -30,7 +30,7 @@ export default function SignInPage() {
       email,
       options: {
         // This URL should be your app root so users land on the homepage
-        emailRedirectTo: process.env.NEXT_PUBLIC_APP_URL, // e.g. http://localhost:3000 or https://yourdomain
+        emailRedirectTo: "http://localhost:3000" //"${NEXT_PUBLIC_BASE_URL}", // e.g. http://localhost:3000 or https://yourdomain
       },
     });
     if (!error) setSent(true); else alert(error.message);

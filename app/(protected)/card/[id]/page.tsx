@@ -1,37 +1,45 @@
-// app/(protected)/card/[id]/page.ts
-import { supabaseServer } from '@/lib/supabase-server';
+import { supabaseServer } from "@/lib/supabase-server";
+import LikeButton from "./like-button";
 
-type RouteParams = { id: string };
+export default async function CardPage({ params }: { params: { id: string } }) {
+  const supabase = await supabaseServer();
+  const { data: { session } } = await supabase.auth.getSession();
 
-export default async function CardPage({
-  params,
-}: {
-  params: Promise<RouteParams>;
-}) {
-  const { id } = await params; // 👈 important: await the params
+  const { data: card } = await supabase
+    .from("cards")
+    .select("*")
+    .eq("id", params.id)
+    .single();
 
-  const { data: card, error } = await supabaseServer
-    .from('prompt_cards')
-    .select('id, title, prompt_text, model_hint, visibility, created_at')
-    .eq('id', id)
-    .maybeSingle();
+  if (!card) return <div className="p-6">Card not found.</div>;
 
-  if (error) {
-    return <main className="p-6">Error: {error.message}</main>;
-  }
-  if (!card) {
-    return <main className="p-6">Card not found.</main>;
+  // record view on server-render (anon allowed)
+  fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/cards/${params.id}/view`, {
+    method: "POST",
+    cache: "no-store",
+    headers: session?.access_token ? { Authorization: `Bearer ${session.access_token}` } : {},
+  }).catch(() => {});
+
+  let hasLiked = false;
+  if (session) {
+    const { data: liked } = await supabase
+      .from("card_likes")
+      .select("card_id")
+      .eq("card_id", params.id)
+      .eq("user_id", session.user.id)
+      .maybeSingle();
+    hasLiked = !!liked;
   }
 
   return (
-    <main className="p-6 max-w-2xl mx-auto space-y-4">
-      <h1 className="text-2xl font-semibold">{card.title}</h1>
-      {card.model_hint && (
-        <p className="text-sm text-gray-500">Model: {card.model_hint}</p>
-      )}
-      <pre className="whitespace-pre-wrap rounded border p-3">
-        {card.prompt_text}
-      </pre>
-    </main>
+    <div className="mx-auto max-w-2xl p-6 space-y-3">
+      <h1 className="text-3xl font-bold">{card.title}</h1>
+      <pre className="whitespace-pre-wrap rounded border p-3 text-sm">{card.content}</pre>
+      <div className="flex items-center gap-3">
+        <span className="text-sm text-gray-600">{new Date(card.created_at).toLocaleString()}</span>
+        <span className="text-sm text-gray-600 ml-auto">Likes: {card.like_count}</span>
+        <LikeButton cardId={card.id} initialLiked={hasLiked} initialCount={card.like_count} />
+      </div>
+    </div>
   );
 }

@@ -10,12 +10,12 @@ export default function ProtectedLayout({ children }: { children: React.ReactNod
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (!mounted) return;
       if (session) setOk(true);
-      else window.location.replace('/auth/signin');
+      else window.location.replace('/signin');
     });
     const { data: sub } = supabase.auth.onAuthStateChange((_, session) => {
       if (!mounted) return;
       if (session) setOk(true);
-      else window.location.replace('/auth/signin');
+      else window.location.replace('/signin');
     });
     return () => { mounted = false; sub.subscription.unsubscribe(); };
   }, []);

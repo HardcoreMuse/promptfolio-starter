@@ -1,6 +1,65 @@
 {
   "version": 3,
   "middleware": {},
-  "functions": {},
+  "functions": {
+    "/api/cards/[id]/like/route": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/api/cards/[id]/like/route_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/app/api/cards/[id]/like/route.js"
+      ],
+      "name": "app/api/cards/[id]/like/route",
+      "page": "/api/cards/[id]/like/route",
+      "matchers": [
+        {
+          "regexp": "^/api/cards/(?<id>[^/]+?)/like$",
+          "originalSource": "/api/cards/[id]/like"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "K72oFolkaCUF5HrgBR4gvhSFkCIQMzGoai78ONuxNSM=",
+        "__NEXT_PREVIEW_MODE_ID": "deefdc84d2ff058cd07a39069ef74f6c",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "c95d414e9a1072d83f719987898674f11b7e893eafa5ae90db794035fe3cb5ec",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "e84a166acfc2c1bedfa439bf523fb61f4d8095356dbed7972b20f08cde345c1e"
+      }
+    },
+    "/api/cards/create/route": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/api/cards/create/route_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/app/api/cards/create/route.js"
+      ],
+      "name": "app/api/cards/create/route",
+      "page": "/api/cards/create/route",
+      "matchers": [
+        {
+          "regexp": "^/api/cards/create$",
+          "originalSource": "/api/cards/create"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "K72oFolkaCUF5HrgBR4gvhSFkCIQMzGoai78ONuxNSM=",
+        "__NEXT_PREVIEW_MODE_ID": "deefdc84d2ff058cd07a39069ef74f6c",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "c95d414e9a1072d83f719987898674f11b7e893eafa5ae90db794035fe3cb5ec",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "e84a166acfc2c1bedfa439bf523fb61f4d8095356dbed7972b20f08cde345c1e"
+      }
+    }
+  },
   "sortedMiddleware": []
 }
