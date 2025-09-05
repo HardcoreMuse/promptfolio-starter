@@ -1,0 +1,10 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/(auth)/signin/page": "app/(auth)/signin/page.js",
+  "/portfolio/[handle]/page": "app/portfolio/[handle]/page.js",
+  "/page": "app/page.js",
+  "/samples/page": "app/samples/page.js",
+  "/u/[username]/page": "app/u/[username]/page.js",
+  "/(protected)/card/[id]/page": "app/(protected)/card/[id]/page.js",
+  "/(protected)/profile/page": "app/(protected)/profile/page.js"
+}

@@ -1,0 +1,10 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/(auth)/signin/page": "/signin",
+  "/portfolio/[handle]/page": "/portfolio/[handle]",
+  "/page": "/",
+  "/samples/page": "/samples",
+  "/u/[username]/page": "/u/[username]",
+  "/(protected)/card/[id]/page": "/card/[id]",
+  "/(protected)/profile/page": "/profile"
+}

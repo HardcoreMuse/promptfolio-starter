@@ -1,9 +1,23 @@
 name = "promptfolio"
 main = "./.open-next/worker.js"
-assets = { directory = "./.open-next/assets" }
 compatibility_date = "2025-09-04"
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
+workers_dev = true
+
+[assets]
+directory = "./.open-next/assets"
 
 [vars]
 NEXT_PUBLIC_SUPABASE_URL = "https://agmcmcbwpoedhrqomcgc.supabase.co"
 NEXT_PUBLIC_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFnbWNtY2J3cG9lZGhycW9tY2djIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcwMDAwMzYsImV4cCI6MjA3MjU3NjAzNn0.pC9etCz1BlFWLXk15KRk9oyqoxBT-7H0bKIMIR9aiH0"
-NEXT_PUBLIC_APP_URL = "https://promptfolio.workers.dev"
+NEXT_PUBLIC_APP_URL = "https://promptfolio.hardcoremuse.workers.dev"
+
+[durable_objects]
+bindings = [
+  { name = "BucketCachePurge", class_name = "BucketCachePurge" },
+  { name = "DOQueueHandler",   class_name = "DOQueueHandler" }
+]
+
+[[migrations]]
+tag = "v4"
+new_sqlite_classes = ["BucketCachePurge", "DOQueueHandler"]

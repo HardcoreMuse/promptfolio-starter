@@ -1,0 +1,37 @@
+{
+  "name": "promptfolio-starter",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "tailwindcss init -p -y > /dev/null 2>&1 || true",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.452.0",
+    "next": "^15.5.2",
+    "posthog-js": "^1.176.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@opennextjs/cloudflare": "^1.7.1",
+    "@types/node": "^24.3.1",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "autoprefixer": "^10.4.19",
+    "esbuild": "^0.25.9",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^15.5.2",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.9",
+    "typescript": "^5.4.5",
+    "wrangler": "^4.34.0"
+  }
+}
