@@ -26,28 +26,28 @@
       "env": {
         "__NEXT_BUILD_ID": "development",
         "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "K72oFolkaCUF5HrgBR4gvhSFkCIQMzGoai78ONuxNSM=",
-        "__NEXT_PREVIEW_MODE_ID": "deefdc84d2ff058cd07a39069ef74f6c",
-        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "c95d414e9a1072d83f719987898674f11b7e893eafa5ae90db794035fe3cb5ec",
-        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "e84a166acfc2c1bedfa439bf523fb61f4d8095356dbed7972b20f08cde345c1e"
+        "__NEXT_PREVIEW_MODE_ID": "4cd14df386f51604ac4d1a866b975cc1",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "0a449c427246235ff325dbd7583dff3f0d83a7acea0c83d1c6138ecc75b04b1d",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "a8f873fa9d25827ed23cdd94b72eb1a4630ea17295fcbcd2f5e2aed50092a998"
       }
     },
-    "/api/cards/create/route": {
+    "/api/cards/[id]/view/route": {
       "files": [
         "server/server-reference-manifest.js",
-        "server/app/api/cards/create/route_client-reference-manifest.js",
+        "server/app/api/cards/[id]/view/route_client-reference-manifest.js",
         "server/middleware-build-manifest.js",
         "server/middleware-react-loadable-manifest.js",
         "server/next-font-manifest.js",
         "server/interception-route-rewrite-manifest.js",
         "server/edge-runtime-webpack.js",
-        "server/app/api/cards/create/route.js"
+        "server/app/api/cards/[id]/view/route.js"
       ],
-      "name": "app/api/cards/create/route",
-      "page": "/api/cards/create/route",
+      "name": "app/api/cards/[id]/view/route",
+      "page": "/api/cards/[id]/view/route",
       "matchers": [
         {
-          "regexp": "^/api/cards/create$",
-          "originalSource": "/api/cards/create"
+          "regexp": "^/api/cards/(?<id>[^/]+?)/view$",
+          "originalSource": "/api/cards/[id]/view"
         }
       ],
       "wasm": [],
@@ -55,9 +55,38 @@
       "env": {
         "__NEXT_BUILD_ID": "development",
         "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "K72oFolkaCUF5HrgBR4gvhSFkCIQMzGoai78ONuxNSM=",
-        "__NEXT_PREVIEW_MODE_ID": "deefdc84d2ff058cd07a39069ef74f6c",
-        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "c95d414e9a1072d83f719987898674f11b7e893eafa5ae90db794035fe3cb5ec",
-        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "e84a166acfc2c1bedfa439bf523fb61f4d8095356dbed7972b20f08cde345c1e"
+        "__NEXT_PREVIEW_MODE_ID": "4cd14df386f51604ac4d1a866b975cc1",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "0a449c427246235ff325dbd7583dff3f0d83a7acea0c83d1c6138ecc75b04b1d",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "a8f873fa9d25827ed23cdd94b72eb1a4630ea17295fcbcd2f5e2aed50092a998"
+      }
+    },
+    "/api/cards/[id]/get/route": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/api/cards/[id]/get/route_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/app/api/cards/[id]/get/route.js"
+      ],
+      "name": "app/api/cards/[id]/get/route",
+      "page": "/api/cards/[id]/get/route",
+      "matchers": [
+        {
+          "regexp": "^/api/cards/(?<id>[^/]+?)/get$",
+          "originalSource": "/api/cards/[id]/get"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "K72oFolkaCUF5HrgBR4gvhSFkCIQMzGoai78ONuxNSM=",
+        "__NEXT_PREVIEW_MODE_ID": "4cd14df386f51604ac4d1a866b975cc1",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "0a449c427246235ff325dbd7583dff3f0d83a7acea0c83d1c6138ecc75b04b1d",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "a8f873fa9d25827ed23cdd94b72eb1a4630ea17295fcbcd2f5e2aed50092a998"
       }
     }
   },

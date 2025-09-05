@@ -11,15 +11,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
+    "/u/[username]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/u/[username]/page.js"
+    ],
     "/(protected)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(protected)/layout.js"
-    ],
-    "/(protected)/card/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(protected)/card/page.js"
     ],
     "/(protected)/card/[id]/page": [
       "static/chunks/webpack.js",
@@ -31,30 +31,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/api/cards/[id]/like/route.js"
     ],
-    "/(protected)/card/new/page": [
+    "/(protected)/card/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(protected)/card/new/page.js"
+      "static/chunks/app/(protected)/card/page.js"
     ],
-    "/api/cards/create/route": [
+    "/api/cards/[id]/view/route": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/api/cards/create/route.js"
+      "static/chunks/app/api/cards/[id]/view/route.js"
     ],
-    "/u/[username]/page": [
+    "/api/cards/[id]/get/route": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/u/[username]/page.js"
-    ],
-    "/(auth)/signin/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(auth)/signin/page.js"
-    ],
-    "/(protected)/profile/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(protected)/profile/page.js"
+      "static/chunks/app/api/cards/[id]/get/route.js"
     ]
   }
 }

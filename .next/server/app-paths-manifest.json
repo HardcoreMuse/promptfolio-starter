@@ -1,10 +1,9 @@
 {
   "/api/cards/[id]/like/route": "app/api/cards/[id]/like/route.js",
-  "/api/cards/create/route": "app/api/cards/create/route.js",
+  "/api/cards/[id]/view/route": "app/api/cards/[id]/view/route.js",
+  "/api/cards/[id]/get/route": "app/api/cards/[id]/get/route.js",
   "/page": "app/page.js",
   "/u/[username]/page": "app/u/[username]/page.js",
-  "/(auth)/signin/page": "app/(auth)/signin/page.js",
   "/(protected)/card/[id]/page": "app/(protected)/card/[id]/page.js",
-  "/(protected)/card/new/page": "app/(protected)/card/new/page.js",
-  "/(protected)/profile/page": "app/(protected)/profile/page.js"
+  "/(protected)/card/page": "app/(protected)/card/page.js"
 }

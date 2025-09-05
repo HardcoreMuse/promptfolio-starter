@@ -41,12 +41,8 @@ export default function LikeButton({
   }
 
   return (
-    <button
-      onClick={() => start(toggle)}
-      className="px-3 py-1 rounded border"
-      disabled={isPending}
-    >
-      {liked ? "♥ Liked" : "♡ Like"}
+    <button onClick={() => start(toggle)} className="px-3 py-1 rounded border" disabled={isPending}>
+      {liked ? "♥" : "♡"} {count}
     </button>
   );
 }

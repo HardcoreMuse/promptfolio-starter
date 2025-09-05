@@ -119,6 +119,12 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   handler satisfies AppPageConfig<"/u/[username]">
 }
 
+// Validate ../../app/api/cards/[id]/get/route.ts
+{
+  const handler = {} as typeof import("../../app/api/cards/[id]/get/route.js")
+  handler satisfies RouteHandlerConfig<"/api/cards/[id]/get">
+}
+
 // Validate ../../app/api/cards/[id]/like/route.ts
 {
   const handler = {} as typeof import("../../app/api/cards/[id]/like/route.js")
@@ -141,6 +147,12 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   const handler = {} as typeof import("../../app/api/cards/list/route.js")
   handler satisfies RouteHandlerConfig<"/api/cards/list">
+}
+
+// Validate ../../app/api/profile/upsert/route.ts
+{
+  const handler = {} as typeof import("../../app/api/profile/upsert/route.js")
+  handler satisfies RouteHandlerConfig<"/api/profile/upsert">
 }
 
 

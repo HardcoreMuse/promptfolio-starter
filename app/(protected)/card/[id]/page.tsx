@@ -37,8 +37,7 @@ export default async function CardPage({ params }: { params: { id: string } }) {
       <pre className="whitespace-pre-wrap rounded border p-3 text-sm">{card.content}</pre>
       <div className="flex items-center gap-3">
         <span className="text-sm text-gray-600">{new Date(card.created_at).toLocaleString()}</span>
-        <span className="text-sm text-gray-600 ml-auto">Likes: {card.like_count}</span>
-        <LikeButton cardId={card.id} initialLiked={hasLiked} initialCount={card.like_count} />
+        <div className="ml-auto"><LikeButton cardId={card.id} initialLiked={hasLiked} initialCount={card.like_count} /></div>
       </div>
     </div>
   );

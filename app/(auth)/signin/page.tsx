@@ -1,3 +1,5 @@
+//TODO Remove this page (I think) as it is redundant to /Login; redirect has been fixed
+
 'use client';
 import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase-browser';

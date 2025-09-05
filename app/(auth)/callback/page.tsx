@@ -1,3 +1,4 @@
+// app/auth/callback/page.tsx
 "use client";
 import { useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -17,7 +18,7 @@ export default function AuthCallbackPage() {
         router.replace("/login");
         return;
       }
-      router.replace(next);
+      router.replace(next); // <- now obeys ?next=
     })();
   }, [router, next]);
 
